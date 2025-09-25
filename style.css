@@ -1,0 +1,27 @@
+/* style.css */
+
+/* Reset some spacing */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+
+/* Style the title */
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Style the dropdown */
+#blog-select {
+  margin-top: 10px;
+  padding: 5px;
+  font-size: 1rem;
+}

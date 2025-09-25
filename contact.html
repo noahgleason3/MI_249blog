@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <h1>My Blog</h1>
+        <select id="blog-select">
+            <option>Latest Posts</option>
+            <option>About</option>
+            <option selected>Contact</option>
+        </select>
+    </header>
+    <article>
+        <h2 style="color:#cc0000;">Get in touch</h2>
+        <p>This page shows an inline style on the heading above.</p>
+        <form>
+            <label for="name">Name</label><br>
+            <input id="name" name="name" type="text" placeholder="Your name"><br><br>
+            <label for="message">Message</label><br>
+            <textarea id="message" name="message" rows="4" cols="40" placeholder="Say hello..."></textarea><br><br>
+            <button type="submit">Send</button>
+        </form>
+    </article>
 </body>
 </html>
