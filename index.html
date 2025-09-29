@@ -3,21 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="MI 349 two-post blog with images, dates, authors, a table, and a newsletter signup." />
+    <title>MI 349 Blog – Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-    <h1>My Blog</h1>
-    <select id="blog-select">
-        <option>Latest Posts</option>
-        <option>About</option>
-        <option>Contact</option>
-    </select>
- </header>
-<article>
-    <h1>Welcome to My Blog</h1>
-    <p>This is a simple blog layout using HTML5 semantic elements.</p>
-</article>
+    <h1><a href="index.html">MI 349 Blog</a></h1>
+    <nav aria-label="Primary">
+      <ul class="nav__links">
+           <li><a href="index.html" aria-current="page">Home</a></li>
+           <li><a href="about.html">About</a></li>
+           <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+<main id="content">
+    
+    <article>
+      <header>
+        <h2>My roommate and Wii Golf</h2>
+        <p class="byline">
+          <time datetime="2025-09-28">September 28, 2025</time> •
+          <span class="author">Noah Gleason</span>
+        </p>
+      </header>
+
+      <figure>
+
+        <img src="images/wii-sports.jpg" alt="Wii Sports Golf Course" />
+        <figcaption>My roommate and I playing Wii Golf</figcaption>
+      </figure>
+
+      <p class="post-excerpt">
+            My roommate and I had a blast playing Wii Golf last weekend. It was a great way to unwind and have some friendly competition. I don't realize how much fun virtual golf could be until we started playing. The graphics were surprisingly good, and the motion controls made it feel like we were actually swinging a club. We played several rounds, and I managed to win a couple of times, which was a nice surprise. Overall, it was a fantastic experience that I would highly recommend to anyone looking for a fun and interactive way to spend their time.
+        </p>
+
+   
+      <section aria-labelledby="data-table-h">
+        <h3 id="data-table-h">Our golf scores</h3>
+        <table>
+          <caption></caption>
+          <thead>
+            <tr>
+              <th scope="col">Round</th>
+              <th scope="col">Noah</th>
+              <th scope="col">John</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Win</td>
+              <td>Loss</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Loss</td>
+              <td>Win</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Loss</td>
+              <td>Win</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </article>
+
+    <hr />
+
+   
+    <article>
+      <header>
+        <h2>Zach Bryan Concert Review</h2>
+        <p class="byline">
+          <time datetime="2025-09-27">September 27, 2025</time> •
+          <span class="author">Noah Gleason</span>
+        </p>
+      </header>
+
+      <figure>
+        <img src="images/zach-bryan.jpg" alt="Zach Bryan performing live" />
+        <figcaption>Zach Bryan in concert</figcaption>
+      </figure>
+
+
+      <p class="post-excerpt">
+            I had the opportunity to attend a Zach Bryan concert last weekend, and it was an unforgettable experience. The energy in the venue was electric, and Zach's performance was nothing short of amazing. He played a mix of his popular songs and some new material, showcasing his incredible talent as a songwriter and musician. The crowd was super into it and I felt like for the majority of the songs everyone knew all the words. One of the highlights of the night was when he performed his hit song "Something in the Orange," which brought the a lot of emotion to the crowd. Overall, it was a night filled with great music, emotional moments, and a deep appreciation for the artistry of Zach Bryan.
+        </p>
+        <p> It being at the Big House made it even better. I had no real expectations going in, but the atmosphere was incredible. The venue was packed, and everyone was there to have a good time. I would love to see him perform again in the future.</p>
+    </article>
+
+    <hr />
+
+    <!-- Newsletter signup should be at the bottom of index.html -->
+    <section aria-labelledby="signup-h">
+      <h2 id="signup-h">Email Newsletter</h2>
+      <p>Sign up for updates!</p>
+      <form action="#" method="post">
+        <label for="nl-email">Email address</label>
+        <input id="nl-email" name="email" type="email" placeholder="you@example.com" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
 </body>
 </html>

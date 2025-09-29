@@ -7,22 +7,29 @@
     <link rel="stylesheet" href="style.css">
     <style>
         article h2 {
-            color: #0066cc;
+            color: hsl(203, 6%, 57%);
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>My Blog</h1>
-        <select id="blog-select">
-            <option>Latest Posts</option>
-            <option selected>About</option>
-            <option>Contact</option>
-        </select>
-    </header>
+    <h1><a href="index.html">MI 349 Blog</a></h1>
+    <nav aria-label="Primary">
+      <ul class="nav__links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <figure>
+
+        <img src="images/me.jpg" alt="Picture of me" />
+        <figcaption>My uncle, my dad, and I</figcaption>
+      </figure>
     <article>
         <h2>About Me</h2>
-        <p>This page demonstrates internal CSS in a &lt;style&gt; block.</p>
+        <p>My name is Noah Gleason, and I'm a student at the University of Michigan studying Information Science. I like golf, the gym, anime and video games. I also like eating food.</p>
     </article>
 </body>
 </html>

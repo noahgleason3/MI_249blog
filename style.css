@@ -8,15 +8,16 @@ body {
 
 /* Style the header */
 header {
-  background-color: #333;
+  background-color: #7ea9a0;
   color: white;
   padding: 1rem;
+  
 }
 
 /* Style the title */
-header h1 {
-  margin: 0;
-  font-size: 1.5rem;
+header h1 a {
+  color: black;           /* change the color */
+  text-decoration: none;  /* remove underline */
 }
 
 /* Style the dropdown */
@@ -25,3 +26,16 @@ header h1 {
   padding: 5px;
   font-size: 1rem;
 }
+/* Remove the default blue link style */
+.nav__links a {
+  color: black;           /* or whatever color you want */
+  text-decoration: none;  /* removes the underline */
+}
+
+/* Optional: add hover effect */
+.nav__links a:hover {
+  color: darkgreen;       /* changes color on hover */
+  text-decoration: underline;
+}
+
+

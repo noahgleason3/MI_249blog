@@ -8,23 +8,44 @@
 </head>
 <body>
     <header>
-        <h1>My Blog</h1>
-        <select id="blog-select">
-            <option>Latest Posts</option>
-            <option>About</option>
-            <option selected>Contact</option>
-        </select>
+        <h1><a href="index.html">MI 349 Blog</a></h1>
+        <nav aria-label="Primary">
+            <ul class="nav__links">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <article>
-        <h2 style="color:#cc0000;">Get in touch</h2>
-        <p>This page shows an inline style on the heading above.</p>
+    <main>
+        <h2>Get in touch</h2>
         <form>
-            <label for="name">Name</label><br>
-            <input id="name" name="name" type="text" placeholder="Your name"><br><br>
-            <label for="message">Message</label><br>
-            <textarea id="message" name="message" rows="4" cols="40" placeholder="Say hello..."></textarea><br><br>
-            <button type="submit">Send</button>
+            <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required>
+            </div>
+            <div>
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required>
+            </div>
+            <div>
+                <label for="reason">Reason for contact</label>
+                <select id="reason" name="reason" required>
+                    <option value="">--Please choose an option--</option>
+                    <option value="hi">Saying hi</option>
+                    <option value="contractor">Looking for a contractor</option>
+                    <option value="interview">Interested in an interview</option>
+                </select>
+            </div>
+            <div>
+                <label for="message">Comment</label>
+                <textarea id="message" name="message" rows="4" cols="40" placeholder="Say hello..." required></textarea>
+            </div>
+            <div>
+                <button type="submit">Send</button>
+            </div>
         </form>
-    </article>
+    </main>
+
 </body>
 </html>
