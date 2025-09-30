@@ -20,24 +20,16 @@
     <main>
         <h2>Get in touch</h2>
         <form name="contact" netlify>
-            <p>
-                <label>Name <input type="text" name="name" /></label>
-            </p>
-            <p>
-                <label>Email <input type="email" name="email" /></label>
-            </p>
-            <p>
-                <button type="submit">Send</button>
-            </p>
-            </form>
             <div>
                 <label for="name">Name</label>
                 <input id="name" name="name" type="text" placeholder="Your name" required>
             </div>
+
             <div>
                 <label for="email">Email address</label>
                 <input id="email" name="email" type="email" placeholder="you@example.com" required>
             </div>
+
             <div>
                 <label for="reason">Reason for contact</label>
                 <select id="reason" name="reason" required>
@@ -47,10 +39,12 @@
                     <option value="interview">Interested in an interview</option>
                 </select>
             </div>
+
             <div>
                 <label for="message">Comment</label>
                 <textarea id="message" name="message" rows="4" cols="40" placeholder="Say hello..." required></textarea>
             </div>
+
             <div>
                 <button type="submit">Send</button>
             </div>
