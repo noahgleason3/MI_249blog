@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        article h2 {
-            color: hsl(203, 6%, 57%);
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -22,14 +17,31 @@
       </ul>
     </nav>
   </header>
-  <figure>
+  <div class="page">
+    <div class="layout">
+      <main id="content">
+  <figure class="figure-float float-right">
 
-        <img src="images/me.jpg" alt="Picture of me" />
+        <img class="profile-img" src="images/me.jpg" alt="Picture of me" />
         <figcaption>My uncle, my dad, and I</figcaption>
       </figure>
     <article>
         <h2>About Me</h2>
         <p>My name is Noah Gleason, and I'm a student at the University of Michigan studying Information Science. I like golf, the gym, anime and video games. I also like eating food.</p>
     </article>
+      </main>
+      <aside class="sidebar">
+        <h3>About this blog</h3>
+        <p class="byline">Student project for MI 349.</p>
+        <nav aria-label="Sidebar">
+          <ul class="nav__links">
+            <li><a href="index.html">Latest</a></li>
+            <li><a href="about.html" aria-current="page">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </aside>
+    </div>
+  </div>
 </body>
 </html>

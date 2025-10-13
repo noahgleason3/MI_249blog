@@ -11,15 +11,17 @@
         <h1><a href="index.html">MI 349 Blog</a></h1>
         <nav aria-label="Primary">
             <ul class="nav__links">
-                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <div class="page">
+      <div class="layout">
+        <main id="content">
         <h2>Get in touch</h2>
-        <form name="contact" netlify>
+        <form name="contact" netlify method="POST">
             <div>
                 <label for="name">Name</label>
                 <input id="name" name="name" type="text" placeholder="Your name" required>
@@ -49,7 +51,20 @@
                 <button type="submit">Send</button>
             </div>
         </form>
-    </main>
+      </main>
+      <aside class="sidebar">
+        <h3>About this blog</h3>
+        <p class="byline">Student project for MI 349.</p>
+        <nav aria-label="Sidebar">
+          <ul class="nav__links">
+            <li><a href="index.html">Latest</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
+          </ul>
+        </nav>
+      </aside>
+    </div>
+  </div>
 
 </body>
 </html>
