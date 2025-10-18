@@ -3,12 +3,14 @@
 /* Reset some spacing */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Noto Serif', serif;
+  background-color: #4a8f50;
+  
 }
 
 /* Style the header */
 header {
-  background-color: #7ea9a0;
+  background-color: #6c8478;
   color: white;
   padding: 1rem;
   
