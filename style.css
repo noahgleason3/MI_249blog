@@ -1,6 +1,3 @@
-/* style.css */
-
-/* Reset some spacing */
 body {
   margin: 0;
   font-family: 'Noto Serif', serif;
@@ -8,7 +5,6 @@ body {
   
 }
 
-/* Style the header */
 header {
   background-color: #6c8478;
   color: white;
@@ -16,32 +12,26 @@ header {
   
 }
 
-/* Style the title */
 header h1 a {
-  color: black;           /* change the color */
-  text-decoration: none;  /* remove underline */
+  color: black;           
+  text-decoration: none;  
 }
 
-/* Style the dropdown */
 #blog-select {
   margin-top: 10px;
   padding: 5px;
   font-size: 1rem;
 }
-/* Remove the default blue link style */
 .nav__links a {
-  color: black;           /* or whatever color you want */
-  text-decoration: none;  /* removes the underline */
+  color: black;           
+  text-decoration: none;  
 }
 
-/* Optional: add hover effect */
 .nav__links a:hover {
-  color: darkgreen;       /* changes color on hover */
+  color: darkgreen;       
   text-decoration: underline;
 }
 
-
-/* Global layout containers */
 .page {
   max-width: 1100px;
   margin: 0 auto;
@@ -65,7 +55,6 @@ header h1 a {
   flex: 0 0 250px;
 }
 
-/* Three-column layout */
 .layout--three {
   display: flex;
   flex-direction: column;
@@ -84,14 +73,12 @@ header h1 a {
   }
 }
 
-/* Sticky header */
 body > header {
   position: sticky;
   top: 0;
   z-index: 50;
 }
 
-/* Floated images with captions */
 .figure-float {
   max-width: 400px;
 }
@@ -111,7 +98,6 @@ body > header {
   }
 }
 
-/* Form layout */
 form {
   display: flex;
   flex-wrap: wrap;
@@ -147,4 +133,133 @@ main img {
   border-radius: 8px; 
 }
 
+:root {
+  --base-font-size: clamp(16px, 1.6vw, 18px);
+  --base-line-height: 1.55;
+}
+body {
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+}
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 3px solid #1b4f72;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
 
+@media (max-width: 600px) {
+  header {
+    padding: 0.75rem;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  nav[aria-label="Primary"] .nav__links {
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+  }
+  #content, .sidebar {
+    flex: 1 1 100%;
+  }
+  main h2 { font-size: 1.4rem; }
+  main h3 { font-size: 1.2rem; }
+  main img { border-radius: 6px; }
+  form input, form textarea, button[type="submit"] {
+    width: 100%;
+    font-size: 1rem;
+  }
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 900px) {
+  .sidebar { 
+    flex: 1 1 100%;
+    order: 2;
+  }
+  #content { order: 1; }
+  .nav__links a:hover { text-decoration: underline; }
+  figure figcaption { font-size: 0.95rem; }
+}
+
+@media (max-width: 380px) {
+  header h1 { font-size: 1.35rem; }
+  nav[aria-label="Primary"] .nav__links a { padding: 0.3rem 0.4rem; }
+  body { word-break: break-word; }
+}
+
+:root {
+  --color-bg: #ffffff;
+  --color-text: #111827;      
+  --color-muted: #6b7280;     
+  --color-link: #1d4ed8;      
+  --color-link-hover: #0ea5e9;
+  --accent-desktop: #2563eb;  
+  --accent-tablet: #16a34a;   
+  --accent-phone: #a855f7;    
+  --header-text: #ffffff;
+  --header-bg: var(--accent-desktop);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+a { color: var(--color-link); }
+a:hover,
+a:focus-visible { color: var(--color-link-hover); text-decoration: underline; }
+
+header {
+  background: var(--header-bg);
+  color: var(--header-text);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+header h1 a {
+  color: var(--header-text);
+  text-decoration: none;
+}
+
+nav[aria-label="Primary"] .nav__links a {
+  color: var(--header-text);
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+}
+nav[aria-label="Primary"] .nav__links a:hover,
+nav[aria-label="Primary"] .nav__links a:focus-visible {
+  background: rgba(255,255,255,0.12);
+  text-decoration: none;
+}
+
+button, [type="submit"] {
+  background: #111827;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+}
+button:hover, [type="submit"]:hover,
+button:focus-visible, [type="submit"]:focus-visible {
+  filter: brightness(1.08);
+}
+
+figure figcaption,
+.byline,
+table caption { color: var(--color-muted); }
+
+@media (max-width: 900px) {
+  :root { --header-bg: var(--accent-tablet); }
+}
+
+@media (max-width: 600px) {
+  :root { --header-bg: var(--accent-phone); }
+}
+
+@media (max-width: 380px) {
+  header { padding: 0.75rem 1rem; }
+}
