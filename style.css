@@ -5,11 +5,34 @@ body {
   
 }
 
+
 header {
+  margin: 1rem auto; 
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;  
+  align-items: center;
+}
+
+.site-header {
   background-color: #6c8478;
   color: white;
+  border-radius: 40px;
   padding: 1rem;
-  
+}
+
+.post-header {
+  background-color: #a8d5a2;
+  color: black;
+  border-radius: 20px;
+  padding: 0.75rem;
+}
+
+.site header {
+  background-color: #a8d5a2; 
+  padding: 1rem 2rem;   
+  border-radius: 20px;     
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 a {
@@ -21,6 +44,11 @@ header h1 a {
   margin-top: 10px;
   padding: 5px;
   font-size: 1rem;
+}
+.nav__links {
+  display: flex;
+  gap: 2rem; /* creates good spacing between links */
+  align-items: center;
 }
 .nav__links a {
   color: black;           
